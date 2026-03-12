@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto+Slab&display=swap');
+
+:root{
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Light-red-bg: hsla(0, 100%, 67%, 0.1);
+    --Orangey-yellow-bg: hsl(39, 100%, 56%, 0.1);
+    --Green-teal-bg: hsl(166, 100%, 37%, 0.1);
+    --Cobalt-blue-bg: hsl(234, 85%, 45%, 0.1);
+
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Hanken Grotesk", sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F3FF;
+}
+
+h1{
+    font-size: 24px;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    max-height: 510px;
+    width: 100%;
+    max-width: 740px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card__result{
+    background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 45px;
+    gap: 10px;
+}
+
+.card__circle{
+    background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+    height: 100%;
+    width: 100%;
+    max-width: 220px;
+    max-height: 220px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.card__circle p{
+    font-size: 78px;
+}
+
+.card__circle span{
+    font-size: 16px;
+}
+
+.card__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card__text h2{
+    font-size: 32px;
+}
+
+.card__text p{
+    font-size: 18px;
+    text-align: center;
+}
+
+.card__summary{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 45px;
+    gap: 10px;
+}
+
+.card__summary > h1{
+    color: black;
+}
+
+.card__summary > ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 16px;
+    width: 100%;
+}
+
+.card__summary > ul > li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 10px;
+    border-radius: 11px;
+}
+
+.card__summary > ul > li > span{
+    color: black;
+}
+
+.item-info{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.card__reaction{
+    color: var(--Light-red);
+    background-color: var(--Light-red-bg);
+}
+
+.card__memory{
+    color: var(--Orangey-yellow);
+    background-color: var(--Orangey-yellow-bg);
+}
+
+.card__verbal{
+    color: var(--Green-teal);
+    background-color: var(--Green-teal-bg);
+}
+
+.card__visual{
+    color: var(--Cobalt-blue);
+    background-color: var(--Cobalt-blue-bg);
+}
+
+.card__button{
+    font-size: 20px;
+    width: 100%;
+    padding: 1rem;
+    background-color: #303B59;
+    color: white;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 655px){
+    .card{
+        grid-template-columns: 1fr;
+        max-height: 95%;
+        max-width: 90%;
+    }
+    .card__result, .card__summary{
+        padding: 20px;
+    }
+
+    .card__circle{
+        height: 100%;
+        width: 100%;
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .card__circle p{
+        font-size: 48px;
+    }
+
+    .card__text h2{
+       font-size: 24px;
+    }
+
+    .card__text p{
+       font-size: 14px;
+    }
+}
