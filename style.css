@@ -130,8 +130,12 @@ h1{
     border-radius: 11px;
 }
 
-.card__summary > ul > li > span{
+.card__summary > ul > li > p{
     color: black;
+}
+
+.card__summary > ul > li > p > span{
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .item-info{
